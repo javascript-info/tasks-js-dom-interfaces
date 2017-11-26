@@ -1,0 +1,30 @@
+{
+  "name": "tasks-js-dom-interfaces",
+  "version": "1.0.0",
+  "description": "Repo with tasks for JS/DOM/Interfaces",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javascript-info/tasks-js-dom-interfaces.git"
+  },
+  "author": "Artsiom Mezin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javascript-info/tasks-js-dom-interfaces/issues"
+  },
+  "homepage": "https://github.com/javascript-info/tasks-js-dom-interfaces#readme",
+  "devDependencies": {
+    "jasmine": "^2.8.0",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4"
+  }
+}
