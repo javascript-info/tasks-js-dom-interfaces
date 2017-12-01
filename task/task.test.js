@@ -1,5 +1,7 @@
 "use strict";
 
+"new request";
+
 describe("pow", function() {
 
     it("при возведении 2 в 3ю степень результат 8", function() {
