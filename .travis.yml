@@ -1,32 +1,34 @@
 sudo: required
 dist: trusty
-
 addons:
+  artifacts:
+    paths:
+    - results
   apt:
     sources:
-      - google-chrome
+    - google-chrome
     packages:
-      - google-chrome-stable
-
+    - google-chrome-stable
 language: node_js
-
 node_js:
-  - "7"
-
+- '7'
 cache:
   directories:
-    - node_modules
-    - bower_components
-    - "$HOME/.npm"
-    - "$HOME/.cache"
-
+  - node_modules
+  - bower_components
+  - $HOME/.npm
+  - $HOME/.cache
 before_script:
-    - npm install
+- npm install
 before_deploy:
-    - npm run build
+- npm run build
 env:
-    NODE_ENV=testing
+  global:
+  - NODE_ENV=testing
+  - ARTIFACTS_BUCKET=travis-superchat
+  - secure: ZVnWnZjzBF1GkkumvBzbsJX9YOh8rM5ciTosNkEiIYH86Es7pUNkJg3BJvq/bboiw+JA2WHDEt1ral7aqVrhMSdcCNrSezy7V+UmlvAmVUKxX6hGtzm39QSjQsiuIbPEp7RzLXvHNbs94drUYg4FeplPPWFlRsBfjOEaRg9tMCzhZq0XMcETFQDgQFXm5B0oT65kXV57vy7+IcoTYj4JnUH0ssDsKDRbIKzzR8hjHAHzIaUWvQtYFXvHcprurL1wdUmJK9G1/FjKQX1GRomN0LX2CVO8ktehjotJ84duiYlIGVF5pNHtuYec2N51+Hx26A7nlV0W0CzzMBMs8FICQDQP4UQFktuGymPbsGtoR2ADxvYygGk2m1VLhCxNXVFeIuo1yC7V4O5QokltnXDcahB0Ka97KNx8bCanQs4lUlrV+D84YvPoqaVDtHrPpTtEp0jCGmChp7s8LmJYiFHdlZeGWMOeWXtsHxjPA9K4GVO8i5gkK0Z3TF0redSyXftsD8NPTqI0xREYIgvY3DIO+N5+nrjOD3yMmSFRufLa7GCChQ9g7pK+J6gOXb0YFWl4sSfkMkV+sX3f71BJV9etI7iQtix+Trqs7ICC1KYbPoACli+f2TiAKkvwazH29hRRAxbkThEd2WpF5DJMx5kQj2pbNjut2Srf3MNOldQWwak=
+  - secure: XrSe6ii5qQuyjZVn9SAYleQM0gMJ07WlE2uZhE/e0G2WTiuEXThDYJ/+D8QUCJH5MGrdG5573di4ec/JTOSFu1+94DL4tsCHkGSREGUmciWvnOboejwXDs8Ixt+ibXvb5epGe7yqPUvx5BI+esMJzYC1FHmQnv0vFEy6Fd6MqlgGia2vDCAwuLVXpxRHNLZLJWU6DkD3sA/PPee6JjvFXDZ2kAML1ZyY0Uj8/fqwUPZDVe0Q3mxsYIClwzrVkX5rXc1VbfHyMwqqewgN5lmecUq26o9dwvfnHxtmsyGcwaXeF/R0kwTRm9qD1er58aNXJgQvYiDXPdkw1sw+NsFhOCgDnB18Bz44eJWK51bPsH9cgkJTsIgef22Y71ElGDtKwEKKxibd0u0g2dY4h1qXJb33QClrqkzwvevYU2wk5NYWzyOqNME+zmsB9tzV1OSRBEmt1WN0rvE+9J6cmCrfXhWOrXJMX1QdjKqeMb75hePf2goiq2bXHtFvo2r3Hpnsd50ESdDWbNfeCCiYicF3shxU5Ya3Hfi2P65/cSTnzwWLQXI2gwfFAOGhWhiLf0mchzZzAl6hQjNF82VNtJgSV14R0sz3/BXwNBI25alrokewdx+LHf6TC74zBK/Y/L40qa7rS1u2kCLqhulA63fRUWsQFGNHhkKlqZ+1EsBnZKE=
 script:
-  - npm run test
+- npm run test
 notifications:
-  webhooks: https://fathomless-shore-84040.herokuapp.com/api/builds
+  webhooks: http://ec2-54-234-52-201.compute-1.amazonaws.com/automation/ci/build

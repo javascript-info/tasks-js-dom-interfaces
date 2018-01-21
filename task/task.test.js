@@ -2,7 +2,7 @@
 
 "new request 5";
 
-describe("pow", function() {
+describe("task suite", function() {
 
     it("при возведении 2 в 3ю степень результат 8", function() {
         expect(pow(2, 3)).toEqual(8);
