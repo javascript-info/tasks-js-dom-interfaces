@@ -1,10 +1,11 @@
-## Нерешаемая никем задача ##
+## Проверка, целое ли число ##
 
-Тут дальше идет длинное описание с кодом
+Напишите функцию `isInteger(num)`, которая возвращает `true`, если `num` -- целое число, иначе `false`.
 
-```
-  hello_world('aaa');
-  hello_world('bbb');
-  hello_world('ccc');
-  hello_world('ddd');
+Например:
+
+```js
+alert( isInteger(1) ); // true
+alert( isInteger(1.5) ); // false
+alert( isInteger(-0.5) ); // false
 ```
