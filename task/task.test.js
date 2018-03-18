@@ -1,15 +1,13 @@
 "use strict";
 
-"new request 5";
+describe("task", function() {
 
-describe("task suite", function() {
-
-    it("при возведении 2 в 3ю степень результат 8", function() {
-        expect(pow(2, 3)).toEqual(8);
+    it("сумма 2 и 3 равна 5", function() {
+        expect(sum(2, 3)).toEqual(5);
     });
 
-    it("при возведении 3 в 4ю степень равен 81", function() {
-        expect(pow(3, 4)).toEqual(81);
+    it("сумма 3 и 4 равна 7", function() {
+        expect(sum(3, 4)).toEqual(7);
     });
 
 });
