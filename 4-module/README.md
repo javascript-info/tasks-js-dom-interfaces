@@ -1,7 +1,6 @@
 ## Введение в DOM ##
 
 ### Чтение ###
-
 * [Окружение: DOM, BOM и JS](http://learn.javascript.ru/browser-environment)
 * [Дерево DOM](http://learn.javascript.ru/dom-nodes)
 * [Работа с DOM из консоли](http://learn.javascript.ru/dom-console)
