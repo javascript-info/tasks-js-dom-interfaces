@@ -23,6 +23,7 @@
 
 * Передача по ссылке
   * Функция swap, которая меняет местами значения полей двух объектов
+  * [Вывести односвязный список](https://learn.javascript.ru/task/output-single-linked-list)
 
 * self/that/this
   * [Поправить метод](https://plnkr.co/edit/qDqXkkkRShKRPbqPvyw9?p=info)
