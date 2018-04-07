@@ -4,6 +4,6 @@
  * @param {number} n index
  * @returns {number}
  */
-function pow3 (m, n) {
+function pow02_03 (m, n) {
 	return m ** n;
 }

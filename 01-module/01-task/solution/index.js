@@ -4,6 +4,6 @@
  * @param {number} n index
  * @returns {number}
  */
-function pow (m, n) {
+function pow01_01 (m, n) {
     return Math.pow(m, n);
 }
