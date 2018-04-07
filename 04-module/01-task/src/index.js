@@ -5,5 +5,5 @@
  * @returns {number}
  */
 function pow2 (m, n) {
-    return m ** n;
+
 }
