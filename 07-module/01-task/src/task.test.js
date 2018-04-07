@@ -1,6 +1,6 @@
 "use strict";
 
-describe("task-2", function() {
+describe("07-module-01-task", function() {
 
     it("при возведении 2 в 3ю степень результат 8", function() {
         expect(pow2(2, 3)).toEqual(8);
