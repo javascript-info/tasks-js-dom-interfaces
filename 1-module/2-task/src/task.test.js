@@ -2,12 +2,16 @@
 
 describe("task-2", function() {
 
-    it("при возведении 2 в 3ю степень результат 8", function() {
-        expect(pow2(2, 3)).toEqual(8);
+    it("если имя корректное то true", function() {
+        expect(isValid('Ilia')).toEqual(true);
     });
 
-    it("при возведении 3 в 4ю степень равен 81", function() {
-        expect(pow2(3, 4)).toEqual(81);
+    it("если содержит пробелы, то false", function () {
+        expect(isValid('Ilia Burlak')).toEqual(false);
+    });
+
+    it("если меньше 4 симовлов то false", function () {
+        expect(isValid('Ili')).toEqual(false);
     });
 
 });
