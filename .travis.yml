@@ -31,4 +31,4 @@ env:
 script:
 - npm run test
 notifications:
-  webhooks: http://ec2-54-234-52-201.compute-1.amazonaws.com/automation/ci/build
+  webhooks: http://learn.javascript.ru/automation/ci/build
