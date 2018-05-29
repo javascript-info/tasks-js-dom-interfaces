@@ -117,6 +117,8 @@ typings/
 # Optional npm cache directory
 .npm
 
+results
+
 # Optional eslint cache
 .eslintcache
 
