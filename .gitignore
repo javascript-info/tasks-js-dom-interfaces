@@ -118,6 +118,7 @@ typings/
 .npm
 
 results
+loadaws.js
 
 # Optional eslint cache
 .eslintcache
