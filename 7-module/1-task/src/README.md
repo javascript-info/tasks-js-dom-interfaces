@@ -1,4 +1,4 @@
-##  mageLogging(fn, log)
+##  makeLogging(fn, log)
 
 Напишите функцию, которая позволит вам логировать параметры, с которыми
 была вызвана декорируемая функция. Этот декоратор может на практике использоваться
@@ -14,7 +14,7 @@ function work(a, b) {
 
 let log = [];
 
-work = mageLogging(work, log);
+work = makeLogging(work, log);
 work(1, 2); // -> 3
 
 console.log(log[0][0] === 1, log[0][1] === 2);
