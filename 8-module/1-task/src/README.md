@@ -10,7 +10,7 @@ let rows = [
         name: 'Ilia',
         age: 25,
         salary: 1000,
-        city: 'Petrozavods'
+        city: 'Petrozavodsk'
     },
     {
         name: 'Vasya',
@@ -37,7 +37,7 @@ let rows = [
             <td>Ilia</td>
             <td>25</td>
             <td>1000</td>
-            <td>Petrozavods</td>
+            <td>Petrozavodsk</td>
         </tr>
         ...
     </tbody>

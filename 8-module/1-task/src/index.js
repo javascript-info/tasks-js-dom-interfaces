@@ -10,7 +10,7 @@
  *          name: 'Ilia',
  *          age: 25,
  *          salary: '1000',
- *          city: 'Petrozavods'
+ *          city: 'Petrozavodsk'
  *      },
  *
  * @constructor
