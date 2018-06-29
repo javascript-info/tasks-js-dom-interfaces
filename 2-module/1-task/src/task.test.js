@@ -13,6 +13,7 @@ describe("2-module-1-task", function() {
         let obj = {test: { test2: { test3: '1' } }};
 
         expect(clone(obj) !== obj).toEqual(true);
+        expect(clone(obj).test.test2 !== obj.test.test2).toEqual(true);
         expect(clone(obj).test.test2.test3 === obj.test.test2.test3).toEqual(true);
     });
 
@@ -20,6 +21,7 @@ describe("2-module-1-task", function() {
         let obj = {test: { test2: { test3: null } }};
 
         expect(clone(obj) !== obj).toEqual(true);
+        expect(clone(obj).test.test2 !== obj.test.test2).toEqual(true);
         expect(clone(obj).test.test2.test3 === obj.test.test2.test3).toEqual(true);
     });
 
