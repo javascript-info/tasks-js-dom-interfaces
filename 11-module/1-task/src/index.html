@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Занятие 11: Подсказки</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <span class="left_top" data-tooltip="Привет мир">Верх</span>
+        <span class="left_bottom" data-tooltip="Привет мир" style="position: fixed; bottom: 0; left: 0">Низ</span>
+    </div>
+    <script>
+        let tooltip = new Tooltip();
+        tooltip.attach(document.body);
+    </script>
+
+</body>
+</html>
