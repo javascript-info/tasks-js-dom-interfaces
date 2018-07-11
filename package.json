@@ -27,5 +27,9 @@
     "karma-jasmine": "^1.1.0",
     "karma-json-reporter": "^1.2.1",
     "karma-phantomjs-launcher": "^1.0.4"
+  },
+  "dependencies": {
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
   }
 }
