@@ -24,7 +24,7 @@ describe("6-module-1-task", function() {
         expect(getBeforeTime(new Date(2018, 5, 15, 13))).toEqual('событие завершилось');
     });
 
-    it("проверяем если событие только что завершилось", function() {
+    it("если остался час событие до начала события", function() {
         expect(getBeforeTime(new Date(2018, 5, 15, 14))).toEqual('1 ч.');
     });
 
@@ -46,6 +46,48 @@ describe("6-module-1-task", function() {
 
     it("проверяем одну секунду", function() {
         expect(getBeforeTime(new Date(2018, 5, 15, 13, 0, 1))).toEqual('1 сек.');
+    });
+
+    it("если количество дней в месяце разное, то должен все равно посчитаться корректно", function () {
+
+        Date.now = function () {
+            // Обратите внимание, для всех тестов
+            // Дата фиксируется на одной точке
+            return new Date(2018, 1, 1, 13).getTime();
+        };
+
+        expect(getBeforeTime(new Date(2018, 2, 1, 13))).toEqual('1 мес.');
+    });
+
+    it("середина месяца и начало следующего, не равно месяцу", function () {
+
+        Date.now = function () {
+            // Обратите внимание, для всех тестов
+            // Дата фиксируется на одной точке
+            return new Date(2018, 0, 20, 13).getTime();
+        };
+
+        expect(getBeforeTime(new Date(2018, 1, 1, 13))).toEqual('12 д.');
+    });
+
+    it("конец года", function () {
+        Date.now = function () {
+            // Обратите внимание, для всех тестов
+            // Дата фиксируется на одной точке
+            return new Date(2018, 11, 31, 3).getTime();
+        };
+
+        expect(getBeforeTime(new Date(2019, 1, 1, 3))).toEqual('1 д.');
+    });
+
+    it("конец года", function () {
+        Date.now = function () {
+            // Обратите внимание, для всех тестов
+            // Дата фиксируется на одной точке
+            return new Date(2018, 11, 31, 3).getTime();
+        };
+
+        expect(getBeforeTime(new Date(2019, 0, 1, 3))).toEqual('1 д.');
     });
 
 });
