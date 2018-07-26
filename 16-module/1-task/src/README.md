@@ -25,4 +25,4 @@ processGenerator(asyncFunction())
     .then(result => console.log(result)); // done-hello:done-world
 ```
 
-!! Важным условием, является то - что все асинхронные функции, должны возвращать Promise.
+!! Важным условием является то, что все асинхронные функции, должны возвращать Promise.
